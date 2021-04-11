@@ -128,55 +128,80 @@ Homicide/murder is the best determiner of a nation's safety standards.
 
 ### Methods
 
-[Vector Autoregression](https://towardsdatascience.com/multivariate-time-series-forecasting-653372b3db36)
+For the input to our machine learning models, we used the 50 features that were identified as important in the previous section.
+
+**Data Preparation**
+
+- Principal Component Analysis (PCA)
+
+Since there are 50 features while there are only about 780 data points, we reduced the number of features so that the models can learn parameters.
+
+**Machine Learning Models**
+
+- Linear Regression
+- Random Forest Regression
+- [Vector Autoregression](https://towardsdatascience.com/multivariate-time-series-forecasting-653372b3db36)
+
+We used Linear Regression for our baseline model, and then we also trained Random Forest Regression to improve the performance.
+
+In fact, the regression models performed decently well, but they failed to recognize trends. So, we also trained Vector Autoregression, which is capable of recognizing trends.
 
 ### Hyperparameter tuning and PCA
 ![Figure of Accuracy with Different PCA](./images/pca_plot.png)
 
+After our innitial models created through Linear Regression and Random Forest Regressor, we used PCA to change the dimensionality of our data to see whether this would improve the accuracy. 
+We can see that increasing the number of principle components improved the performance of our Linear Regression drastically, but did not have much of an effect on the Random Forest model.
+The highest accuracy can be observed on the Random Forest model run on 17 components.  
+
 ## Predictions
+
+After comparing the performances of machine learning models, it turned out that Vector Autoregression model performed the best based on our observations from the plots as shown below.
 
 ![Figure of Forecasts](./images/forecasts.png)
 
+Here are the results of our predictions given by the Vector Autoregression model.
+
 **Pillar Value Predictions for 2015**
 
-|    | country   |    busi |   rank_busi |    econ |   rank_econ |    educ |   rank_educ |    envi |   rank_envi |    gove |   rank_gove |    heal |   rank_heal |    pers |   rank_pers |    safe |   rank_safe |    soci |   rank_soci |
-|---:|:----------|--------:|------------:|--------:|------------:|--------:|------------:|--------:|------------:|--------:|------------:|--------:|------------:|--------:|------------:|--------:|------------:|--------:|------------:|
-|  0 | Georgia   | 52.9735 |          79 | 59.9654 |          61 | 59.1949 |          85 | 53.4916 |          28 | 54.0779 |          98 | 65.9174 |          46 | 56.0263 |          71 | 66.28   |          76 | 45.3822 |          48 |
-|  1 | Macedonia | 55.536  |          88 | 59.253  |          56 | 66.4805 |         120 | 64.9589 |          94 | 51.2761 |          88 | 72.848  |          84 | 55.64   |          70 | 76.0674 |         114 | 45.0173 |          44 |
-|  2 | Chad      | 39.7406 |          14 | 45.7739 |          10 | 21.5546 |           2 | 55.9769 |          44 | 25.3702 |           5 | 47.9827 |           4 | 36.2053 |          16 | 56.4767 |          26 | 39.8931 |          12 |
-|  3 | Togo      | 45.6765 |          31 | 50.8053 |          28 | 32.023  |          13 | 58.3408 |          56 | 34.2592 |          19 | 54.1159 |          11 | 54.1778 |          66 | 61.3347 |          49 | 39.3812 |           9 |
-|  4 | Zimbabwe  | 48.1731 |          45 | 60.0522 |          63 | 47.0835 |          41 | 53.439  |          27 | 36.7532 |          30 | 68.2035 |          52 | 41.5871 |          30 | 61.4612 |          50 | 46.5467 |          58 |
+| country   |    busi |   rank_busi |    econ |   rank_econ |    educ |   rank_educ |    envi |   rank_envi |    gove |   rank_gove |    heal |   rank_heal |    pers |   rank_pers |    safe |   rank_safe |    soci |   rank_soci |
+|:----------|--------:|------------:|--------:|------------:|--------:|------------:|--------:|------------:|--------:|------------:|--------:|------------:|--------:|------------:|--------:|------------:|--------:|------------:|
+| Georgia   | 52.9735 |          69 | 59.9654 |          87 | 59.1949 |          63 | 53.4916 |         120 | 54.0779 |          50 | 65.9174 |         102 | 56.0263 |          77 | 66.28   |          72 | 45.3822 |         100 |
+| Macedonia | 55.536  |          60 | 59.253  |          92 | 66.4805 |          28 | 64.9589 |          54 | 51.2761 |          60 | 72.848  |          64 | 55.64   |          78 | 76.0674 |          34 | 45.0173 |         104 |
+| Chad      | 39.7406 |         134 | 45.7739 |         138 | 21.5546 |         146 | 55.9769 |         104 | 25.3702 |         143 | 47.9827 |         144 | 36.2053 |         132 | 56.4767 |         122 | 39.8931 |         136 |
+| Togo      | 45.6765 |         117 | 50.8053 |         120 | 32.023  |         135 | 58.3408 |          92 | 34.2592 |         129 | 54.1159 |         137 | 54.1778 |          82 | 61.3347 |          99 | 39.3812 |         139 |
+| Zimbabwe  | 48.1731 |         103 | 60.0522 |          85 | 47.0835 |         107 | 53.439  |         121 | 36.7532 |         118 | 68.2035 |          96 | 41.5871 |         118 | 61.4612 |          98 | 46.5467 |          90 |
 
 **Pillar Value Predictions for 2016**
 
-|    | country   |    busi |   rank_busi |    econ |   rank_econ |    educ |   rank_educ |    envi |   rank_envi |    gove |   rank_gove |    heal |   rank_heal |    pers |   rank_pers |    safe |   rank_safe |    soci |   rank_soci |
-|---:|:----------|--------:|------------:|--------:|------------:|--------:|------------:|--------:|------------:|--------:|------------:|--------:|------------:|--------:|------------:|--------:|------------:|--------:|------------:|
-|  0 | Georgia   | 50.5652 |          58 | 61.4895 |          64 | 57.6592 |          76 | 51.3529 |          28 | 52.6507 |          87 | 63.3463 |          42 | 57.1895 |          73 | 66.8425 |          74 | 46.5718 |          53 |
-|  1 | Macedonia | 53.5217 |          77 | 59.4928 |          50 | 65.5915 |         114 | 57.7827 |          55 | 49.1805 |          75 | 70.7027 |          69 | 56.6112 |          71 | 74.8046 |         112 | 43.1385 |          24 |
-|  2 | Chad      | 42.8513 |          29 | 45.6832 |           9 | 22.6597 |           3 | 57.1193 |          50 | 25.9784 |           7 | 49.6053 |           5 | 36.2493 |          20 | 61.3478 |          50 | 40.4285 |          15 |
-|  3 | Togo      | 45.6366 |          36 | 50.5939 |          26 | 29.5387 |           9 | 56.0203 |          46 | 30.512  |          17 | 54.501  |          13 | 45.9548 |          40 | 67.8589 |          81 | 41.2209 |          17 |
-|  4 | Zimbabwe  | 42.1331 |          26 | 66.2768 |          92 | 53.7926 |          66 | 55.3031 |          39 | 42.7921 |          55 | 73.1755 |          83 | 48.9734 |          50 | 67.7488 |          80 | 57.6737 |         116 |
+| country   |    busi |   rank_busi |    econ |   rank_econ |    educ |   rank_educ |    envi |   rank_envi |    gove |   rank_gove |    heal |   rank_heal |    pers |   rank_pers |    safe |   rank_safe |    soci |   rank_soci |
+|:----------|--------:|------------:|--------:|------------:|--------:|------------:|--------:|------------:|--------:|------------:|--------:|------------:|--------:|------------:|--------:|------------:|--------:|------------:|
+| Georgia   | 50.5652 |          90 | 61.4895 |          84 | 57.6592 |          72 | 51.3529 |         120 | 52.6507 |          61 | 63.3463 |         106 | 57.1895 |          75 | 66.8425 |          74 | 46.5718 |          95 |
+| Macedonia | 53.5217 |          71 | 59.4928 |          98 | 65.5915 |          34 | 57.7827 |          93 | 49.1805 |          73 | 70.7027 |          79 | 56.6112 |          77 | 74.8046 |          36 | 43.1385 |         124 |
+| Chad      | 42.8513 |         119 | 45.6832 |         139 | 22.6597 |         145 | 57.1193 |          98 | 25.9784 |         141 | 49.6053 |         143 | 36.2493 |         128 | 61.3478 |          98 | 40.4285 |         133 |
+| Togo      | 45.6366 |         112 | 50.5939 |         122 | 29.5387 |         139 | 56.0203 |         102 | 30.512  |         131 | 54.501  |         135 | 45.9548 |         108 | 67.8589 |          67 | 41.2209 |         131 |
+| Zimbabwe  | 42.1331 |         122 | 66.2768 |          56 | 53.7926 |          82 | 55.3031 |         109 | 42.7921 |          93 | 73.1755 |          65 | 48.9734 |          98 | 67.7488 |          68 | 57.6737 |          32 |
 
 **Prosperity Predictions for 2015**
 
-|    | country   |   proseprity |   rank_proseprity |
-|---:|:----------|-------------:|------------------:|
-|  0 | Georgia   |      57.0344 |                68 |
-|  1 | Macedonia |      60.7864 |                96 |
-|  2 | Chad      |      40.9971 |                 6 |
-|  3 | Togo      |      47.7905 |                22 |
-|  4 | Zimbabwe  |      51.4777 |                35 |
+| country   |   proseprity |   rank_proseprity |
+|:----------|-------------:|------------------:|
+| Georgia   |      57.0344 |                80 |
+| Macedonia |      60.7864 |                52 |
+| Chad      |      40.9971 |               142 |
+| Togo      |      47.7905 |               126 |
+| Zimbabwe  |      51.4777 |               113 |
 
 **Prosperity Predictions for 2016**
 
-|    | country   |   proseprity |   rank_proseprity |
-|---:|:----------|-------------:|------------------:|
-|  0 | Georgia   |      56.4075 |                68 |
-|  1 | Macedonia |      58.9807 |                82 |
-|  2 | Chad      |      42.4359 |                 8 |
-|  3 | Togo      |      46.8708 |                23 |
-|  4 | Zimbabwe  |      56.4299 |                69 |
+| country   |   proseprity |   rank_proseprity |
+|:----------|-------------:|------------------:|
+| Georgia   |      56.4075 |                80 |
+| Macedonia |      58.9807 |                66 |
+| Chad      |      42.4359 |               140 |
+| Togo      |      46.8708 |               125 |
+| Zimbabwe  |      56.4299 |                79 |
+
 
 ## CONCLUSION
 
-We did so great!
+Autoregression model seemed to forecase better than regression models, probably since it can take deal with time series data better
