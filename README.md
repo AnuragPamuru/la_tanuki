@@ -6,7 +6,7 @@ Members: Takashi Yabuta, Anurag Pamuru, Mizuki Kadowaki, Laura Diao
 ## Introduction
 (a. Introduction to data)
 Our dataset contains score values and rankings for 9 different societal pillars from 149 different countries from the years 2007-2014. Each pillar has multiple subcategories that contributed to the category ranking and score. 
-The societal pillars and subcategories are as follows:
+The societal pillars are as follows:
 
 - Business
 - Economy
@@ -19,15 +19,20 @@ The societal pillars and subcategories are as follows:
 - Social Capital 
 
 ## Data
-(b. Your method of data cleaning)
 
 Due to contract terms, we were not granted access to the results from the Gallup World Poll. Because of this, 
 we removed variables that we did not have access to and only kept datapoints which had values for all variables.
-Additionally, we also expunged all "year" columns in each of the pillar datasets.
+
+In order to accomplish the task of finding which countries saw the highest prosperity growth over the period from
+2007 to 2014, we calculated the Prosperity Score as the arithmetic mean of the scores for all pillars for each individual Country.
+We then found the average growth/change in this metric over the 8 years for which we had data. These table manipulations gave us access
+to the names of the top 5 countries in terms of "Average Prosperity Growth Per Year", which happened to be Togo, Zimbabwe, Chad,
+Georgia, and Macedonia.
+
 
 ## Observations
 
-| Country     | Average Prosperity Grorwth Per Year | Most Important Pillar |
+| Country     | Average Prosperity Growth Per Year  | Most Important Pillar |
 |-------------|-------------------------------------|-----------------------|
 | Togo        | 0.955408                            | Safety and Security   |
 | Zimbabwe    | 0.904582                            | Governance            |
@@ -87,18 +92,17 @@ Additionally, we also expunged all "year" columns in each of the pillar datasets
 |------------------------------------|-------------|
 | vtf                                | 0.141       |
 
-(d. Data visualizations)
+## Data visualizations
 
 ![Figure of Global Prosperity Growth by Regions](./images/prosperity_map.png "Global Prosperity Growth by Regions")
 
 ![Figure of Accuracy with Different PCA](./images/pca_plot.png)
 
+![Figure of Forecasts](./images/forecasts.png)
+
 
 ## Machine Learning Method
-(e. Detailed descriptions of machine learning methods)
 
 ## Predictions
-(f. Your predictive scores and ranks for the years 2015 and year 2016)
 
 ## Conclusion
-(g. Final conclusions)
