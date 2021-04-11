@@ -1,0 +1,2146 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20194.20.0125.0835                               -->
+<workbook source-build='2019.4.3 (20194.20.0125.0835)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AutoCreateAndUpdateDSDPhoneLayouts ignorable='true' predowngraded='true' />
+    <MapboxVectorStylesAndLayers />
+    <SheetIdentifierTracking ignorable='true' predowngraded='true' />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='envi_map' inline='true' name='federated.0paz1zx0nv5oi512ynwll18uv0dz' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='envi_map' name='textscan.0rliui102qt0bq0zlobnf0bsheoy'>
+            <connection class='textscan' directory='C:/Users/User/Downloads' filename='envi_map.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0rliui102qt0bq0zlobnf0bsheoy' name='envi_map.csv' table='[envi_map#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='string' name='isocode' ordinal='1' />
+            <column datatype='real' name='envi' ordinal='2' />
+            <column datatype='integer' name='rank_envi' ordinal='3' />
+            <column datatype='string' name='country' ordinal='4' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[envi_map.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[envi_map.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>isocode</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[isocode]</local-name>
+            <parent-name>[envi_map.csv]</parent-name>
+            <remote-alias>isocode</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>envi</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[envi]</local-name>
+            <parent-name>[envi_map.csv]</parent-name>
+            <remote-alias>envi</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rank_envi</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[rank_envi]</local-name>
+            <parent-name>[envi_map.csv]</parent-name>
+            <remote-alias>rank_envi</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>country</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[country]</local-name>
+            <parent-name>[envi_map.csv]</parent-name>
+            <remote-alias>country</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Country' datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Envi' datatype='real' name='[envi]' role='measure' type='quantitative' />
+      <column caption='Isocode' datatype='string' name='[isocode]' role='dimension' type='nominal' />
+      <column caption='Rank Envi' datatype='integer' name='[rank_envi]' role='measure' type='quantitative' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.400853' measure-ordering='alphabetic' measure-percentage='0.599147' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+    <datasource caption='safe_t' inline='true' name='federated.1n0nprm01hw9gj1753ev80deq1ww' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='safe_t' name='textscan.0sgy42a139din2174jmb608movn4'>
+            <connection class='textscan' directory='C:/Users/User/Downloads' filename='safe_t.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0sgy42a139din2174jmb608movn4' name='safe_t.csv' table='[safe_t#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='string' name='isocode' ordinal='1' />
+            <column datatype='real' name='safe' ordinal='2' />
+            <column datatype='integer' name='rank_safe' ordinal='3' />
+            <column datatype='string' name='country' ordinal='4' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[safe_t.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[safe_t.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>isocode</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[isocode]</local-name>
+            <parent-name>[safe_t.csv]</parent-name>
+            <remote-alias>isocode</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>safe</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[safe]</local-name>
+            <parent-name>[safe_t.csv]</parent-name>
+            <remote-alias>safe</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rank_safe</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[rank_safe]</local-name>
+            <parent-name>[safe_t.csv]</parent-name>
+            <remote-alias>rank_safe</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>country</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[country]</local-name>
+            <parent-name>[safe_t.csv]</parent-name>
+            <remote-alias>country</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Country' datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Isocode' datatype='string' name='[isocode]' role='dimension' type='nominal' />
+      <column caption='Rank Safe' datatype='integer' name='[rank_safe]' role='measure' type='quantitative' />
+      <column caption='Safe' datatype='real' name='[safe]' role='measure' type='quantitative' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.5' measure-ordering='alphabetic' measure-percentage='0.4' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+    <datasource caption='continental_heal_data' inline='true' name='federated.06zuw490yd62yz1h80s4d00d98e1' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='continental_heal_data' name='textscan.0jnlgp3078hw3i110bcwo1fq4dn4'>
+            <connection class='textscan' directory='C:/Users/Anurag/Downloads/la_tanuki/data' filename='continental_heal_data.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0jnlgp3078hw3i110bcwo1fq4dn4' name='continental_heal_data.csv' table='[continental_heal_data#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='isocode' ordinal='0' />
+            <column datatype='string' name='region' ordinal='1' />
+            <column datatype='real' name='region-score' ordinal='2' />
+            <column datatype='integer' name='Year' ordinal='3' />
+            <column datatype='real' name='heal Growth' ordinal='4' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[continental_heal_data.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>isocode</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[isocode]</local-name>
+            <parent-name>[continental_heal_data.csv]</parent-name>
+            <remote-alias>isocode</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>region</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[region]</local-name>
+            <parent-name>[continental_heal_data.csv]</parent-name>
+            <remote-alias>region</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>region-score</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[region-score]</local-name>
+            <parent-name>[continental_heal_data.csv]</parent-name>
+            <remote-alias>region-score</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[continental_heal_data.csv]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>heal Growth</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[heal Growth]</local-name>
+            <parent-name>[continental_heal_data.csv]</parent-name>
+            <remote-alias>heal Growth</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+      <column caption='Isocode' datatype='string' name='[isocode]' role='dimension' type='nominal' />
+      <column caption='Region-Score' datatype='real' name='[region-score]' role='measure' type='quantitative' />
+      <column caption='Region' datatype='string' name='[region]' role='dimension' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.535181' measure-ordering='alphabetic' measure-percentage='0.464819' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+    <datasource caption='cont_educ_pros_rank' inline='true' name='federated.0yyiabe1tm5boi14jlzdl1x69b9m' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='cont_educ_pros_rank' name='textscan.1rtxfa00uzwdvw1ap74091xhp01r'>
+            <connection class='textscan' directory='C:/Users/Anurag/Downloads/la_tanuki/data/ld_dashboard' filename='cont_educ_pros_rank.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1rtxfa00uzwdvw1ap74091xhp01r' name='cont_educ_pros_rank.csv' table='[cont_educ_pros_rank#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='string' name='region' ordinal='1' />
+            <column datatype='date' date-parse-format='yyyy' name='Year' ordinal='2' />
+            <column datatype='real' name='educ Growth Rank' ordinal='3' />
+            <column datatype='real' name='Prosperity Growth Rank' ordinal='4' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[cont_educ_pros_rank.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[cont_educ_pros_rank.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>region</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[region]</local-name>
+            <parent-name>[cont_educ_pros_rank.csv]</parent-name>
+            <remote-alias>region</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[cont_educ_pros_rank.csv]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>educ Growth Rank</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[educ Growth Rank]</local-name>
+            <parent-name>[cont_educ_pros_rank.csv]</parent-name>
+            <remote-alias>educ Growth Rank</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Prosperity Growth Rank</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Prosperity Growth Rank]</local-name>
+            <parent-name>[cont_educ_pros_rank.csv]</parent-name>
+            <remote-alias>Prosperity Growth Rank</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='real' name='[Prosperity Growth Rank]' role='measure' type='quantitative' />
+      <column datatype='date' name='[Year]' role='dimension' type='quantitative' />
+      <column datatype='real' name='[educ Growth Rank]' role='measure' type='quantitative' />
+      <column caption='Region' datatype='string' name='[region]' role='dimension' type='nominal' />
+      <column-instance column='[educ Growth Rank]' derivation='Avg' name='[avg:educ Growth Rank:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Prosperity Growth Rank]' derivation='None' name='[none:Prosperity Growth Rank:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[educ Growth Rank]' derivation='None' name='[none:educ Growth Rank:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[region]' derivation='None' name='[none:region:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Prosperity Growth Rank]' derivation='Sum' name='[sum:Prosperity Growth Rank:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[educ Growth Rank]' derivation='Sum' name='[sum:educ Growth Rank:qk]' pivot='key' type='quantitative' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.466951' measure-ordering='alphabetic' measure-percentage='0.533049' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0yyiabe1tm5boi14jlzdl1x69b9m].[avg:educ Growth Rank:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.0yyiabe1tm5boi14jlzdl1x69b9m].[none:educ Growth Rank:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.0yyiabe1tm5boi14jlzdl1x69b9m].[sum:educ Growth Rank:qk]&quot;</bucket>
+            </map>
+            <map to='#91dcea'>
+              <bucket>&quot;[federated.0yyiabe1tm5boi14jlzdl1x69b9m].[none:Prosperity Growth Rank:qk]&quot;</bucket>
+            </map>
+            <map to='#91dcea'>
+              <bucket>&quot;[federated.0yyiabe1tm5boi14jlzdl1x69b9m].[sum:Prosperity Growth Rank:qk]&quot;</bucket>
+            </map>
+            <map to='#a4a4d5'>
+              <bucket>&quot;[federated.15ig4300ibazmz11naw4s03fooud].[sum:heal Growth Rank:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0yyiabe1tm5boi14jlzdl1x69b9m]&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:region:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Africa&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Oceania&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Europe&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Asia&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Americas&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <datasource-dependencies datasource='federated.15ig4300ibazmz11naw4s03fooud'>
+        <column datatype='real' name='[heal Growth Rank]' role='measure' type='quantitative' />
+        <column-instance column='[heal Growth Rank]' derivation='Sum' name='[sum:heal Growth Rank:qk]' pivot='key' type='quantitative' />
+      </datasource-dependencies>
+    </datasource>
+    <datasource caption='cont_heal_pros_rank' inline='true' name='federated.15ig4300ibazmz11naw4s03fooud' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='cont_heal_pros_rank' name='textscan.1bx0rju12pldgh1h7u9k2139hfon'>
+            <connection class='textscan' directory='C:/Users/Anurag/Downloads/la_tanuki/data/ld_dashboard' filename='cont_heal_pros_rank.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1bx0rju12pldgh1h7u9k2139hfon' name='cont_heal_pros_rank.csv' table='[cont_heal_pros_rank#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='string' name='region' ordinal='1' />
+            <column datatype='date' date-parse-format='yyyy' name='Year' ordinal='2' />
+            <column datatype='real' name='heal Growth Rank' ordinal='3' />
+            <column datatype='real' name='Prosperity Growth Rank' ordinal='4' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[cont_heal_pros_rank.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[cont_heal_pros_rank.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>region</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[region]</local-name>
+            <parent-name>[cont_heal_pros_rank.csv]</parent-name>
+            <remote-alias>region</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[cont_heal_pros_rank.csv]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>heal Growth Rank</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[heal Growth Rank]</local-name>
+            <parent-name>[cont_heal_pros_rank.csv]</parent-name>
+            <remote-alias>heal Growth Rank</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Prosperity Growth Rank</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Prosperity Growth Rank]</local-name>
+            <parent-name>[cont_heal_pros_rank.csv]</parent-name>
+            <remote-alias>Prosperity Growth Rank</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='date' name='[Year]' role='dimension' type='quantitative' />
+      <column caption='Region' datatype='string' name='[region]' role='dimension' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.466951' measure-ordering='alphabetic' measure-percentage='0.533049' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+    <datasource caption='heal_map' inline='true' name='federated.197j7lu155dtya14zo59a0kcjsjy' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='heal_map' name='textscan.18hrcqw02dm72c1768kyv1a4hl5b'>
+            <connection class='textscan' directory='C:/Users/Anurag/Downloads/la_tanuki/data/ld_dashboard' filename='heal_map.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.18hrcqw02dm72c1768kyv1a4hl5b' name='heal_map.csv' table='[heal_map#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='string' name='isocode' ordinal='1' />
+            <column datatype='real' name='heal' ordinal='2' />
+            <column datatype='integer' name='rank_heal' ordinal='3' />
+            <column datatype='string' name='country' ordinal='4' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[heal_map.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[heal_map.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>isocode</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[isocode]</local-name>
+            <parent-name>[heal_map.csv]</parent-name>
+            <remote-alias>isocode</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>heal</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[heal]</local-name>
+            <parent-name>[heal_map.csv]</parent-name>
+            <remote-alias>heal</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rank_heal</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[rank_heal]</local-name>
+            <parent-name>[heal_map.csv]</parent-name>
+            <remote-alias>rank_heal</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>country</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[country]</local-name>
+            <parent-name>[heal_map.csv]</parent-name>
+            <remote-alias>country</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Country' datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Heal' datatype='real' name='[heal]' role='measure' type='quantitative' />
+      <column caption='Isocode' datatype='string' name='[isocode]' role='dimension' type='nominal' />
+      <column caption='Rank Heal' datatype='integer' name='[rank_heal]' role='measure' type='quantitative' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.400853' measure-ordering='alphabetic' measure-percentage='0.599147' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+    <datasource caption='educ_map' inline='true' name='federated.1viqujg15b4cnb1em72bu1nktrml' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='educ_map' name='textscan.18i6ubh108lckb19upicb1vcyyhh'>
+            <connection class='textscan' directory='C:/Users/Anurag/Downloads/la_tanuki/data/ld_dashboard' filename='educ_map.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.18i6ubh108lckb19upicb1vcyyhh' name='educ_map.csv' table='[educ_map#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='string' name='isocode' ordinal='1' />
+            <column datatype='real' name='educ' ordinal='2' />
+            <column datatype='integer' name='rank_educ' ordinal='3' />
+            <column datatype='string' name='country' ordinal='4' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[educ_map.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[educ_map.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>isocode</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[isocode]</local-name>
+            <parent-name>[educ_map.csv]</parent-name>
+            <remote-alias>isocode</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>educ</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[educ]</local-name>
+            <parent-name>[educ_map.csv]</parent-name>
+            <remote-alias>educ</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rank_educ</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[rank_educ]</local-name>
+            <parent-name>[educ_map.csv]</parent-name>
+            <remote-alias>rank_educ</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>country</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[country]</local-name>
+            <parent-name>[educ_map.csv]</parent-name>
+            <remote-alias>country</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Country' datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Educ' datatype='real' name='[educ]' role='measure' type='quantitative' />
+      <column caption='Isocode' datatype='string' name='[isocode]' role='dimension' type='nominal' />
+      <column caption='Rank Educ' datatype='integer' name='[rank_educ]' role='measure' type='quantitative' />
+      <column-instance column='[educ]' derivation='Sum' name='[sum:educ:ok]' pivot='key' type='ordinal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.400853' measure-ordering='alphabetic' measure-percentage='0.599147' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[sum:educ:ok]' type='palette'>
+            <map to='#499894'>
+              <bucket>206.05263900756836</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>314.58745574951172</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>408.01322174072266</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>436.04799652099609</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>480.17590713500977</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>502.13374710083008</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>584.37974548339844</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>649.22605895996094</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>270.1253662109375</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>380.70627593994141</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>422.51475143432617</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>462.15114974975586</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>488.00516891479492</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>535.00309753417969</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>622.63579559326172</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>64400.066486358643</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>170.72403335571289</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>296.7974853515625</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>384.34999084472656</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>428.56055450439453</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>475.35475921630859</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>491.70320510864258</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>553.69183349609375</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>632.97579193115234</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>218.75872421264648</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>320.08444595336914</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>416.19185638427734</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>439.47605133056641</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>483.15844345092773</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>514.65757369995117</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>591.94680786132813</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>206.9493465423584</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>315.66626358032227</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>408.14126968383789</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>436.39123916625977</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>480.42888259887695</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>506.07124328613281</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>586.36036682128906</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>175.02291107177734</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>307.01777648925781</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>384.69546890258789</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>429.75882720947266</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>475.49238586425781</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>492.95271682739258</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>556.995849609375</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>633.08611297607422</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>245.60043525695801</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>367.16607666015625</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>422.05453491210938</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>449.62093734741211</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>485.81840515136719</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>529.76868438720703</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>617.85719299316406</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>132.46195888519287</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>279.15678024291992</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>381.04536819458008</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>424.1596794128418</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>463.16501998901367</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>488.0840950012207</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>538.58359527587891</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>622.97463989257813</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>240.25051689147949</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>339.7935791015625</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>419.27095413208008</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>447.67316436767578</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>485.59748077392578</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>521.11914825439453</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>612.25819396972656</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>204.31119537353516</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>310.68110275268555</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>388.13219451904297</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>430.07575225830078</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>475.58457565307617</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>493.79339981079102</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>566.66024780273438</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>633.69038391113281</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>224.8876895904541</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>327.91050338745117</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>416.89512252807617</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>443.00852203369141</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>483.37682342529297</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>514.67813491821289</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>602.36869812011719</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>228.40909957885742</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>335.66814804077148</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>417.25134658813477</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>445.49581146240234</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>484.07365036010742</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>516.29524612426758</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>608.61952972412109</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>244.99979019165039</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>357.00146102905273</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>421.06993103027344</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>449.15884017944336</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>485.72739791870117</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>522.48292541503906</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>616.20566558837891</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>250.75065612792969</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>255.09689521789551</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>367.32949829101563</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>422.48917007446289</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>460.7247200012207</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>486.93503570556641</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>533.21711730957031</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>621.30757141113281</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>208.04755973815918</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>319.59943771362305</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>409.83913040161133</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>436.80799102783203</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>481.77174758911133</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>511.58675384521484</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>586.64047241210938</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>205.88250160217285</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>312.92081451416016</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>389.66930770874023</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>434.37122344970703</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>478.23080062866211</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>501.10721588134766</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>566.77210235595703</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>634.86688232421875</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>141.43299579620361</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>286.27618789672852</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>382.22699356079102</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>424.49113082885742</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>466.93451690673828</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>489.80424880981445</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>539.42428588867188</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>625.21132659912109</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>239.60869979858398</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>336.98371124267578</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>419.08447647094727</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>445.87373733520508</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>484.13542175292969</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>520.02731704711914</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>608.702880859375</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>213.1314754486084</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>319.6365852355957</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>415.19633102416992</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>438.29349517822266</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>482.22416305541992</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>512.26902389526367</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>587.16813659667969</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>163.56195640563965</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>291.15237236022949</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>382.52352523803711</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>426.96249771118164</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>474.10109329223633</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>490.40666580200195</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>550.99386596679688</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>629.04853820800781</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='edu pros'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#ffffff'>Education and Prosperity Trends by Continent</run>
+          </formatted-text>
+        </title>
+        <caption>
+          <formatted-text>
+            <run>The trends of sum of Prosperity Growth Rank and sum of educ Growth Rank for Year broken down by Region.  Color shows details about Region.&#10;&#10;trends for prosperity growth is the bar&#10;trends for education growth are the line</run>
+          </formatted-text>
+        </caption>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cont_educ_pros_rank' name='federated.0yyiabe1tm5boi14jlzdl1x69b9m' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0yyiabe1tm5boi14jlzdl1x69b9m'>
+            <column datatype='real' name='[Prosperity Growth Rank]' role='measure' type='quantitative' />
+            <column datatype='date' name='[Year]' role='dimension' type='quantitative' />
+            <column datatype='real' name='[educ Growth Rank]' role='measure' type='quantitative' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[region]' derivation='None' name='[none:region:nk]' pivot='key' type='nominal' />
+            <column caption='Region' datatype='string' name='[region]' role='dimension' type='nominal' />
+            <column-instance column='[Prosperity Growth Rank]' derivation='Sum' name='[sum:Prosperity Growth Rank:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[educ Growth Rank]' derivation='Sum' name='[sum:educ Growth Rank:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0yyiabe1tm5boi14jlzdl1x69b9m].[sum:educ Growth Rank:qk]' field-type='quantitative' fold='true' scope='rows' type='space' />
+            <format attr='display' class='0' field='[federated.0yyiabe1tm5boi14jlzdl1x69b9m].[sum:Prosperity Growth Rank:qk]' scope='rows' value='false' />
+            <format attr='display' class='0' field='[federated.0yyiabe1tm5boi14jlzdl1x69b9m].[sum:educ Growth Rank:qk]' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.0yyiabe1tm5boi14jlzdl1x69b9m].[none:region:nk]' value='false' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#167397' />
+          </style-rule>
+          <style-rule element='legend'>
+            <format attr='font-size' value='10' />
+            <format attr='border-width' value='0' />
+            <format attr='border-style' value='none' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0yyiabe1tm5boi14jlzdl1x69b9m].[none:region:nk]' />
+            </encodings>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0yyiabe1tm5boi14jlzdl1x69b9m].[sum:Prosperity Growth Rank:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0yyiabe1tm5boi14jlzdl1x69b9m].[none:region:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0yyiabe1tm5boi14jlzdl1x69b9m].[sum:educ Growth Rank:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0yyiabe1tm5boi14jlzdl1x69b9m].[none:region:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>([federated.0yyiabe1tm5boi14jlzdl1x69b9m].[none:region:nk] * ([federated.0yyiabe1tm5boi14jlzdl1x69b9m].[sum:Prosperity Growth Rank:qk] + [federated.0yyiabe1tm5boi14jlzdl1x69b9m].[sum:educ Growth Rank:qk]))</rows>
+        <cols>[federated.0yyiabe1tm5boi14jlzdl1x69b9m].[none:Year:qk]</cols>
+      </table>
+      <simple-id uuid='{24A99C10-352A-4D01-B61A-E99775FD2672}' />
+    </worksheet>
+    <worksheet name='edu_map'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#ffffff'>Average Education Score by Country (&apos;07-&apos;14)</run>
+            <run>Æ&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='educ_map' name='federated.1viqujg15b4cnb1em72bu1nktrml' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1viqujg15b4cnb1em72bu1nktrml'>
+            <column-instance column='[educ]' derivation='Avg' name='[avg:educ:qk]' pivot='key' type='quantitative' />
+            <column caption='Country' datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column caption='Educ' datatype='real' name='[educ]' role='measure' type='quantitative' />
+            <column-instance column='[country]' derivation='None' name='[none:country:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1viqujg15b4cnb1em72bu1nktrml].[Longitude (generated)]' field-type='quantitative' max='23454394.41108977' min='-21109909.423528656' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.1viqujg15b4cnb1em72bu1nktrml].[Latitude (generated)]' field-type='quantitative' max='15538667.15333413' min='-8662226.489564158' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1viqujg15b4cnb1em72bu1nktrml].[avg:educ:qk]' palette='blue_teal_10_0' type='interpolated' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#167397' />
+          </style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='color' field='[federated.1viqujg15b4cnb1em72bu1nktrml].[avg:educ:qk]' value='Educational Levels' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Multipolygon' />
+            <encodings>
+              <color column='[federated.1viqujg15b4cnb1em72bu1nktrml].[avg:educ:qk]' />
+              <lod column='[federated.1viqujg15b4cnb1em72bu1nktrml].[none:country:nk]' />
+              <geometry column='[federated.1viqujg15b4cnb1em72bu1nktrml].[Geometry (generated)]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='has-stroke' value='false' />
+                <format attr='mark-transparency' value='255' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1viqujg15b4cnb1em72bu1nktrml].[Latitude (generated)]</rows>
+        <cols>[federated.1viqujg15b4cnb1em72bu1nktrml].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{F80841ED-CEAA-4C4A-B75E-A9CCE88BD2E6}' />
+    </worksheet>
+    <worksheet name='heal pros'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Health and Prosperity Trends by Country&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cont_educ_pros_rank' name='federated.0yyiabe1tm5boi14jlzdl1x69b9m' />
+            <datasource caption='cont_heal_pros_rank' name='federated.15ig4300ibazmz11naw4s03fooud' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0yyiabe1tm5boi14jlzdl1x69b9m'>
+            <column datatype='real' name='[Prosperity Growth Rank]' role='measure' type='quantitative' />
+            <column datatype='date' name='[Year]' role='dimension' type='quantitative' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[region]' derivation='None' name='[none:region:nk]' pivot='key' type='nominal' />
+            <column caption='Region' datatype='string' name='[region]' role='dimension' type='nominal' />
+            <column-instance column='[Prosperity Growth Rank]' derivation='Sum' name='[sum:Prosperity Growth Rank:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.15ig4300ibazmz11naw4s03fooud'>
+            <column datatype='real' name='[heal Growth Rank]' role='measure' type='quantitative' />
+            <column-instance column='[heal Growth Rank]' derivation='Sum' name='[sum:heal Growth Rank:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0yyiabe1tm5boi14jlzdl1x69b9m].[:Measure Names]'>
+            <groupfilter function='level-members' level='[:Measure Names]' />
+          </filter>
+          <slices>
+            <column>[federated.0yyiabe1tm5boi14jlzdl1x69b9m].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.0yyiabe1tm5boi14jlzdl1x69b9m].[sum:Prosperity Growth Rank:qk]' scope='rows' value='false' />
+            <format attr='display' class='0' field='[federated.15ig4300ibazmz11naw4s03fooud].[sum:heal Growth Rank:qk]' scope='rows' value='false' />
+            <encoding attr='space' class='0' field='[federated.15ig4300ibazmz11naw4s03fooud].[sum:heal Growth Rank:qk]' field-type='quantitative' fold='true' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.0yyiabe1tm5boi14jlzdl1x69b9m].[none:region:nk]' value='false' />
+          </style-rule>
+          <style-rule element='annotation'>
+            <format attr='stroke-size' id='annotation_1' value='3' />
+            <format attr='border-color' id='annotation_1' value='#000000' />
+            <format attr='border-width' id='annotation_1' value='0' />
+            <format attr='border-style' id='annotation_1' value='none' />
+            <format attr='body-type' id='annotation_2' value='none' />
+            <format attr='stroke-size' id='annotation_2' value='3' />
+            <format attr='body-type' id='annotation_1' value='none' />
+            <format attr='stroke-color' id='annotation_1' value='#000000' />
+            <format attr='stroke-color' id='annotation_2' value='#000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0yyiabe1tm5boi14jlzdl1x69b9m].[none:region:nk]' />
+            </encodings>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0yyiabe1tm5boi14jlzdl1x69b9m].[sum:Prosperity Growth Rank:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0yyiabe1tm5boi14jlzdl1x69b9m].[none:region:nk]' />
+            </encodings>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.15ig4300ibazmz11naw4s03fooud].[sum:heal Growth Rank:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0yyiabe1tm5boi14jlzdl1x69b9m].[none:region:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0yyiabe1tm5boi14jlzdl1x69b9m].[none:region:nk] * ([federated.0yyiabe1tm5boi14jlzdl1x69b9m].[sum:Prosperity Growth Rank:qk] + [federated.15ig4300ibazmz11naw4s03fooud].[sum:heal Growth Rank:qk]))</rows>
+        <cols>[federated.0yyiabe1tm5boi14jlzdl1x69b9m].[none:Year:qk]</cols>
+      </table>
+      <simple-id uuid='{D65E8C33-45D0-4F6D-B4FA-F413FAAE5DD9}' />
+    </worksheet>
+    <worksheet name='heal scatter'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Scatter of Prosperity Rank by Health Rank</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cont_heal_pros_rank' name='federated.15ig4300ibazmz11naw4s03fooud' />
+          </datasources>
+          <datasource-dependencies datasource='federated.15ig4300ibazmz11naw4s03fooud'>
+            <column datatype='real' name='[Prosperity Growth Rank]' role='measure' type='quantitative' />
+            <column datatype='date' name='[Year]' role='dimension' type='quantitative' />
+            <column datatype='real' name='[heal Growth Rank]' role='measure' type='quantitative' />
+            <column-instance column='[Prosperity Growth Rank]' derivation='None' name='[none:Prosperity Growth Rank:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[heal Growth Rank]' derivation='None' name='[none:heal Growth Rank:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Year]' derivation='Year' name='[yr:Year:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.15ig4300ibazmz11naw4s03fooud].[none:heal Growth Rank:qk]' field-type='quantitative' major-origin='0.0' major-spacing='1.0' max='8.0' min='0.0' minor-origin='0.0' minor-show='false' minor-spacing='0.10000000000000001' range-type='fixed' reverse='true' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.15ig4300ibazmz11naw4s03fooud].[none:Prosperity Growth Rank:qk]' field-type='quantitative' major-origin='0.0' major-spacing='1.0' max='8.0' min='0.0' minor-show='false' range-type='fixed' reverse='true' scope='rows' type='space' />
+            <format attr='tick-color' field='[federated.15ig4300ibazmz11naw4s03fooud].[none:Prosperity Growth Rank:qk]' value='#00000000' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.15ig4300ibazmz11naw4s03fooud].[none:Prosperity Growth Rank:qk]' value='' />
+          </style-rule>
+          <style-rule element='annotation'>
+            <format attr='body-type' id='annotation_1' value='none' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <lod column='[federated.15ig4300ibazmz11naw4s03fooud].[yr:Year:ok]' />
+            </encodings>
+            <trendline enable-confidence-bands='false' enable-instant-analytics='true' enabled='true' exclude-color='true' exclude-intercept='false' fit='linear' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='shape' value=':filled/circle' />
+                <format attr='size' value='1.2413811683654785' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.15ig4300ibazmz11naw4s03fooud].[none:Prosperity Growth Rank:qk]</rows>
+        <cols>[federated.15ig4300ibazmz11naw4s03fooud].[none:heal Growth Rank:qk]</cols>
+        <annotations>
+          <annotation class='point' id='1' mark-position='1' pullback='0' text-width='460'>
+            <formatted-text>
+              <run>Æ&#10;</run>
+              <run fontcolor='#000000' fontsize='9'>Prosperity Growth Rank = </run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#000000' fontsize='9'>0.385714 * heal Growth Rank  +  1.84286</run>
+              <run>Æ&#10;</run>
+              <run bold='true' fontcolor='#000000' fontsize='9'>R-Squared:        </run>
+              <run fontcolor='#000000' fontsize='9'>0.148776</run>
+              <run>Æ&#10;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='6.7244094488188981'>
+                  <node-reference>
+                    <axis>[federated.15ig4300ibazmz11naw4s03fooud].[none:heal Growth Rank:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='4.4240282685512371'>
+                  <node-reference>
+                    <axis>[federated.15ig4300ibazmz11naw4s03fooud].[none:Prosperity Growth Rank:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </point>
+            <body x='77' y='129' />
+          </annotation>
+        </annotations>
+      </table>
+      <simple-id uuid='{8F9DE952-5872-4FF3-9921-F78661C4F235}' />
+    </worksheet>
+    <worksheet name='heal_map'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Average Health by Country&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='heal_map' name='federated.197j7lu155dtya14zo59a0kcjsjy' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.197j7lu155dtya14zo59a0kcjsjy'>
+            <column-instance column='[heal]' derivation='Avg' name='[avg:heal:qk]' pivot='key' type='quantitative' />
+            <column caption='Country' datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column caption='Heal' datatype='real' name='[heal]' role='measure' type='quantitative' />
+            <column-instance column='[country]' derivation='None' name='[none:country:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.197j7lu155dtya14zo59a0kcjsjy].[Longitude (generated)]' field-type='quantitative' max='21189255.367252506' min='-18745536.630871478' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.197j7lu155dtya14zo59a0kcjsjy].[Latitude (generated)]' field-type='quantitative' max='13681040.703768333' min='-9913459.8111039884' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Multipolygon' />
+            <encodings>
+              <color column='[federated.197j7lu155dtya14zo59a0kcjsjy].[avg:heal:qk]' />
+              <lod column='[federated.197j7lu155dtya14zo59a0kcjsjy].[none:country:nk]' />
+              <geometry column='[federated.197j7lu155dtya14zo59a0kcjsjy].[Geometry (generated)]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='has-stroke' value='false' />
+                <format attr='mark-transparency' value='255' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.197j7lu155dtya14zo59a0kcjsjy].[Latitude (generated)]</rows>
+        <cols>[federated.197j7lu155dtya14zo59a0kcjsjy].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{AE111B4B-42C8-4CF7-8E41-AA19DAB6EF89}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Correlations Between Education and Prosperity'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#ffffff' fontname='Tableau Bold'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style>
+        <style-rule element='dash-title'>
+          <format attr='background-color' value='#167397' />
+        </style-rule>
+        <style-rule element='dash-text'>
+          <format attr='text-align' id='dash-text_15' value='center' />
+          <format attr='vertical-align' id='dash-text_15' value='center' />
+        </style-rule>
+      </style>
+      <size sizing-mode='automatic' />
+      <zones>
+        <zone h='100000' id='4' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98044' id='27' param='vert' type='layout-flow' w='99002' x='499' y='978'>
+            <zone h='6968' id='28' type='title' w='99002' x='499' y='978'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='91076' id='12' param='horz' type='layout-flow' w='99002' x='499' y='7946'>
+              <zone h='91076' id='7' param='horz' type='layout-flow' w='99002' x='499' y='7946'>
+                <zone h='91076' id='5' type='layout-basic' w='99002' x='499' y='7946'>
+                  <zone h='80074' id='3' name='edu_map' w='58977' x='499' y='7946'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='11002' id='8' name='edu_map' pane-specification-id='0' param='[federated.1viqujg15b4cnb1em72bu1nktrml].[avg:educ:qk]' type='color' w='58977' x='499' y='88020'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='61811' id='10' name='edu pros' w='40025' x='59476' y='23430'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='13781' id='13' name='edu pros' pane-specification-id='1' param='[federated.0yyiabe1tm5boi14jlzdl1x69b9m].[none:region:nk]' type='color' w='40025' x='59476' y='85241'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone forceUpdate='true' h='15484' id='24' type='text' w='40025' x='59476' y='7946'>
+                    <formatted-text>
+                      <run bold='true' fontalignment='1' fontcolor='#167397' fontname='Tableau Bold' fontsize='15'>R-Squared</run>
+                      <run bold='true' fontalignment='1' fontcolor='#000000' fontsize='15'>: 0.279388</run>
+                    </formatted-text>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1150' minheight='1150' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='23' type='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='22' param='vert' type='layout-flow' w='98934' x='533' y='1000'>
+                <zone fixed-size='280' h='73625' id='3' is-fixed='true' name='edu_map' w='30098' x='533' y='12250'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='13125' id='25' name='edu_map' pane-specification-id='0' param='[federated.1viqujg15b4cnb1em72bu1nktrml].[sum:educ:qk]' type='color' w='30098' x='533' y='85875'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='73625' id='10' is-fixed='true' name='edu pros' w='34436' x='30631' y='12250'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='13125' id='13' name='edu pros' pane-specification-id='1' param='[federated.0yyiabe1tm5boi14jlzdl1x69b9m].[none:region:nk]' type='color' w='34436' x='30631' y='85875'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{324AD1D8-C2BD-4E6B-9322-33438FC837B0}' />
+    </dashboard>
+    <dashboard name='heal dash'>
+      <style />
+      <size maxheight='800' maxwidth='1600' minheight='800' minwidth='1600' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='4' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='84875' id='7' param='horz' type='layout-flow' w='99000' x='500' y='14125'>
+            <zone h='84875' id='5' type='layout-basic' w='99000' x='500' y='14125'>
+              <zone h='69500' id='3' name='heal_map' w='31438' x='500' y='14125'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone fixed-size='160' h='15375' id='14' is-fixed='true' type='layout-basic' w='99000' x='500' y='83625'>
+                <zone h='15375' id='6' param='horz' type='layout-flow' w='30313' x='500' y='83625'>
+                  <zone h='15375' id='8' name='heal_map' pane-specification-id='0' param='[federated.197j7lu155dtya14zo59a0kcjsjy].[avg:heal:qk]' type='color' w='30313' x='500' y='83625'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                </zone>
+                <zone h='15375' id='15' param='horz' type='layout-flow' w='68687' x='30813' y='83625'>
+                  <zone fixed-size='681' h='15375' id='13' is-fixed='true' name='heal pros' pane-specification-id='1' param='[federated.0yyiabe1tm5boi14jlzdl1x69b9m].[none:region:nk]' type='color' w='43063' x='30813' y='83625'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='15375' id='17' type='empty' w='25624' x='73876' y='83625'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                </zone>
+              </zone>
+              <zone h='69500' id='9' name='heal scatter' w='34625' x='64875' y='14125'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='69500' id='11' name='heal pros' w='32937' x='31938' y='14125'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone forceUpdate='true' h='13125' id='16' type='text' w='99000' x='500' y='1000'>
+            <formatted-text>
+              <run fontsize='24'>Title</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1100' minheight='1100' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='23' type='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='22' param='vert' type='layout-flow' w='99000' x='500' y='1000'>
+                <zone forceUpdate='true' h='13125' id='16' type='text' w='99000' x='500' y='1000'>
+                  <formatted-text>
+                    <run fontsize='24'>Title</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='69500' id='3' is-fixed='true' name='heal_map' w='31438' x='500' y='14125'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='15375' id='8' name='heal_map' pane-specification-id='0' param='[federated.197j7lu155dtya14zo59a0kcjsjy].[sum:heal:qk]' type='color' w='30313' x='500' y='83625'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='69500' id='11' is-fixed='true' name='heal pros' w='32937' x='31938' y='14125'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='681' h='15375' id='13' name='heal pros' pane-specification-id='1' param='[federated.0yyiabe1tm5boi14jlzdl1x69b9m].[none:region:nk]' type='color' w='43063' x='30813' y='83625'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='69500' id='9' is-fixed='true' name='heal scatter' w='34625' x='64875' y='14125'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{8C0310DE-B3EF-4D96-A9E4-F6DBF41CBEB0}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='230'>
+    <window class='worksheet' name='edu_map'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1viqujg15b4cnb1em72bu1nktrml].[avg:educ:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='1' />
+      </viewpoint>
+      <simple-id uuid='{22372DAD-7EB6-481D-ABC0-D5F7613AF116}' />
+    </window>
+    <window class='worksheet' name='heal_map'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.197j7lu155dtya14zo59a0kcjsjy].[avg:heal:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='1' />
+      </viewpoint>
+      <simple-id uuid='{25EAEF3B-CDA8-4E6C-BC25-64A4B88C1322}' />
+    </window>
+    <window class='worksheet' name='edu pros'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.0yyiabe1tm5boi14jlzdl1x69b9m].[none:region:nk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='bottom'>
+          <strip size='2147483647'>
+            <card type='caption' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{2BED4807-2EA8-48E5-B62B-C7A9A16234FE}' />
+    </window>
+    <window class='worksheet' name='heal pros'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0yyiabe1tm5boi14jlzdl1x69b9m].[:Measure Names]' show-morefewerbutton='false' type='filter' />
+            <card pane-specification-id='1' param='[federated.0yyiabe1tm5boi14jlzdl1x69b9m].[none:region:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{8DAB3509-E479-4C3F-A21A-7EC09527CFC3}' />
+    </window>
+    <window class='worksheet' name='heal scatter'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{32E7D103-79F3-4704-9103-7CADD3E1CE2D}' />
+    </window>
+    <window class='dashboard' name='Correlations Between Education and Prosperity'>
+      <viewpoints>
+        <viewpoint name='edu pros'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='edu_map'>
+          <zoom type='entire-view' />
+          <default-map-tool-selection tool='1' />
+        </viewpoint>
+      </viewpoints>
+      <active id='24' />
+      <simple-id uuid='{49C2D248-68F1-4547-BB91-0BDEF18184E8}' />
+    </window>
+    <window class='dashboard' maximized='true' name='heal dash'>
+      <viewpoints>
+        <viewpoint name='heal pros'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='heal scatter'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='heal_map'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='16' />
+      <simple-id uuid='{F48294A8-B1E4-4D7F-A460-D3557B7339B9}' />
+    </window>
+  </windows>
+</workbook>

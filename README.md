@@ -7,6 +7,7 @@ Members: Takashi Yabuta, Anurag Pamuru, Mizuki Kadowaki, Laura Diao
 (a. Introduction to data)
 Our dataset contains score values and rankings for 9 different societal pillars from 149 different countries from the years 2007-2014. Each pillar has multiple subcategories that contributed to the category ranking and score. 
 The societal pillars and subcategories are as follows:
+
 - Business
 - Economy
 - Education
@@ -17,15 +18,18 @@ The societal pillars and subcategories are as follows:
 - Safety and Security
 - Social Capital 
 
-
-
 ## Data
 (b. Your method of data cleaning)
 
-Due to contract terms, we were not granted access to the results from the Gallup World Poll. Because of this, we removed variables that we did not have access to and only kept datapoints which had values for all variables. 
+Due to contract terms, we were not granted access to the results from the Gallup World Poll. Because of this, 
+we removed variables that we did not have access to and only kept datapoints which had values for all variables.
+Additionally, we also expunged all "year" columns in each of the pillar datasets.
+
+There were some columns that only had *, so we deleted such columns.
 
 ## Observations
-(c. Explanation for trends in data)
+
+It is immediately evident from 
 
 | Country     | Average Prosperity Grorwth Per Year | Most Important Pillar |
 |-------------|-------------------------------------|-----------------------|
@@ -40,9 +44,6 @@ Due to contract terms, we were not granted access to the results from the Gallup
 | ippr                                   | 2.4785      |
 | logis                                  | 2.040       |
 | affs                                   | 2.024       |
-| bband                                  | -0.012      |
-| redu                                   | -0.029      |
-| elcostlnl                              | -0.478      |
 
 | Most Impactful Categories for Economy | Coefficient |
 |---------------------------|-------------|
@@ -115,7 +116,7 @@ Due to contract terms, we were not granted access to the results from the Gallup
 
 ![Figure of Global Prosperity Growth by Regions](./images/prosperity_map.png "Global Prosperity Growth by Regions")
 
-
+![Figure of Accuracy with Different PCA](./images/pca_plot.png)
 
 
 ## Machine Learning Method
