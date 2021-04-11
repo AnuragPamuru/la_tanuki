@@ -161,6 +161,9 @@ After comparing the performances of machine learning models, it turned out that 
 
 Here are the results of our predictions given by the Vector Autoregression model.
 
+
+
+
 **Pillar Value Predictions for 2015**
 
 | country   |    busi |   rank_busi |    econ |   rank_econ |    educ |   rank_educ |    envi |   rank_envi |    gove |   rank_gove |    heal |   rank_heal |    pers |   rank_pers |    safe |   rank_safe |    soci |   rank_soci |
@@ -200,6 +203,9 @@ Here are the results of our predictions given by the Vector Autoregression model
 | Chad      |      42.4359 |               140 |
 | Togo      |      46.8708 |               125 |
 | Zimbabwe  |      56.4299 |                79 |
+
+
+
 
 
 ## CONCLUSION
