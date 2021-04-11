@@ -1,4 +1,4 @@
-# Data Hack 2021 Report Prosperity Track II
+# Data Hack 2021 Report Economics Track II
 
 Team: Tanuki
 Members: Takashi Yabuta, Anurag Pamuru, Mizuki Kadowaki, Laura Diao
