@@ -204,4 +204,6 @@ Here are the results of our predictions given by the Vector Autoregression model
 
 ## CONCLUSION
 
-Autoregression model seemed to forecase better than regression models, probably since it can take deal with time series data better
+Our prediction task was to create a model that determines for the years 2015 and 2016, each country’s pillar scores and ranks, as well as each country’s overall prosperity scores and ranks. To accomplish this we tested out various models such as Linear regression,  Random Forest regression, and Vector Autoregression models. Given 50 features and 780 data points, we implemented Principal Component Analysis to prepare the data and reduce the features going into the models we tested. Despite the vast improvements in the linear regression model after editing the number of principal components, we saw the highest accuracy in the random forest model with fewer features. 
+
+Training and graphing the results of the Vector Autoregression model and random forest model, it turned out that in comparison, the Vector Autoregression model had the best performance. This performance may be attributed to how the Vector Autoregression models can recognize trends, handle time series data, and implicitly assume that the future predictions will follow after the past. 
