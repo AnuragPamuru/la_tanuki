@@ -121,14 +121,23 @@ Homicide/murder is the best determiner of a nation's safety standards.
 - Meanwhile, on the left we have a ranking of which continent was the global leader in prosperity growth each year.
     - There is no clear winner here; however, Africa seems to be the most consistent leader in growth.
 
+![Figure of Average Prosperity Growth for Top 5 Rising Nations](./images/prosperity_top_5.png "Average Prosperity Growth for Top 5 Rising Nations")
+
+
 ## MACHINE LEARNING METHODS
+
+### Methods
+
+[Vector Autoregression](https://towardsdatascience.com/multivariate-time-series-forecasting-653372b3db36)
 
 ### Hyperparameter tuning and PCA
 ![Figure of Accuracy with Different PCA](./images/pca_plot.png)
 
-## PREDICTIONS
+## Predictions
 
 ![Figure of Forecasts](./images/forecasts.png)
+
+**Pillar Value Predictions for 2015**
 
 |    | country   |    busi |   rank_busi |    econ |   rank_econ |    educ |   rank_educ |    envi |   rank_envi |    gove |   rank_gove |    heal |   rank_heal |    pers |   rank_pers |    safe |   rank_safe |    soci |   rank_soci |
 |---:|:----------|--------:|------------:|--------:|------------:|--------:|------------:|--------:|------------:|--------:|------------:|--------:|------------:|--------:|------------:|--------:|------------:|--------:|------------:|
@@ -138,6 +147,8 @@ Homicide/murder is the best determiner of a nation's safety standards.
 |  3 | Togo      | 45.6765 |          31 | 50.8053 |          28 | 32.023  |          13 | 58.3408 |          56 | 34.2592 |          19 | 54.1159 |          11 | 54.1778 |          66 | 61.3347 |          49 | 39.3812 |           9 |
 |  4 | Zimbabwe  | 48.1731 |          45 | 60.0522 |          63 | 47.0835 |          41 | 53.439  |          27 | 36.7532 |          30 | 68.2035 |          52 | 41.5871 |          30 | 61.4612 |          50 | 46.5467 |          58 |
 
+**Pillar Value Predictions for 2016**
+
 |    | country   |    busi |   rank_busi |    econ |   rank_econ |    educ |   rank_educ |    envi |   rank_envi |    gove |   rank_gove |    heal |   rank_heal |    pers |   rank_pers |    safe |   rank_safe |    soci |   rank_soci |
 |---:|:----------|--------:|------------:|--------:|------------:|--------:|------------:|--------:|------------:|--------:|------------:|--------:|------------:|--------:|------------:|--------:|------------:|--------:|------------:|
 |  0 | Georgia   | 50.5652 |          58 | 61.4895 |          64 | 57.6592 |          76 | 51.3529 |          28 | 52.6507 |          87 | 63.3463 |          42 | 57.1895 |          73 | 66.8425 |          74 | 46.5718 |          53 |
@@ -146,6 +157,26 @@ Homicide/murder is the best determiner of a nation's safety standards.
 |  3 | Togo      | 45.6366 |          36 | 50.5939 |          26 | 29.5387 |           9 | 56.0203 |          46 | 30.512  |          17 | 54.501  |          13 | 45.9548 |          40 | 67.8589 |          81 | 41.2209 |          17 |
 |  4 | Zimbabwe  | 42.1331 |          26 | 66.2768 |          92 | 53.7926 |          66 | 55.3031 |          39 | 42.7921 |          55 | 73.1755 |          83 | 48.9734 |          50 | 67.7488 |          80 | 57.6737 |         116 |
 
+**Prosperity Predictions for 2015**
 
+|    | country   |   proseprity |   rank_proseprity |
+|---:|:----------|-------------:|------------------:|
+|  0 | Georgia   |      57.0344 |                68 |
+|  1 | Macedonia |      60.7864 |                96 |
+|  2 | Chad      |      40.9971 |                 6 |
+|  3 | Togo      |      47.7905 |                22 |
+|  4 | Zimbabwe  |      51.4777 |                35 |
+
+**Prosperity Predictions for 2016**
+
+|    | country   |   proseprity |   rank_proseprity |
+|---:|:----------|-------------:|------------------:|
+|  0 | Georgia   |      56.4075 |                68 |
+|  1 | Macedonia |      58.9807 |                82 |
+|  2 | Chad      |      42.4359 |                 8 |
+|  3 | Togo      |      46.8708 |                23 |
+|  4 | Zimbabwe  |      56.4299 |                69 |
 
 ## CONCLUSION
+
+We did so great!
